@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+#speedometer {
+    position: relative;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input {
+    width: 100px;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
