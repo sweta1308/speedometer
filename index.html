@@ -9,13 +9,13 @@
 <body>
     <div class="container">
         <h1>Speedometer App</h1>
-        <label for="speedInput">Enter Speed (0-100):</label>
+        <label for="speedInput">Enter Speed (0-180):</label>
         <input type="number" id="speedInput" min="0" max="180" step="1" placeholder="Enter speed">
         <button onclick="setSpeed()">Submit</button>
         <div id="speedometer">
             <div id="needle"></div>
-            <svg height="200" width="200">
-                <path d="M 10,100 A 90,90 0 0,1 190,100" fill="#ddd" />
+            <svg height="160" width="500">
+                <circle cx="100" cy="100" r="80" stroke-width="2" stroke="black" fill="transparent"></circle>
             </svg>
         </div>
     </div>
