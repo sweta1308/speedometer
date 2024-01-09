@@ -31,7 +31,7 @@ input {
 
 #needle {
     position: absolute;
-    width: 5px;
+    width: 2px;
     height: 80px;
     background-color: red;
     left: 50%;
@@ -39,6 +39,21 @@ input {
     transform-origin: 50% 100%;
     transform: translateX(-50%) rotate(-135deg);
     transition: transform 0.5s ease-in-out;
+    z-index: 100;
+}
+
+.keys {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(0deg, white 80%, black);
+    left: 50%;
+    top: 10%;
+    transform-origin: 50% 100%;
+}
+
+.keys p {
+    margin-left: -10px;
 }
 
 button {
