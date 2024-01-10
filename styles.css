@@ -11,16 +11,9 @@ body {
     text-align: center;
 }
 
-h1 {
-    color: #2c3e50;
-}
-
-label {
-    margin-right: 10px;
-}
-
-input {
-    width: 100px;
+.content {
+    display: flex;
+    gap: 50px;
 }
 
 #speedometer {
@@ -40,6 +33,11 @@ input {
     transform: translateX(-50%) rotate(-135deg);
     transition: transform 0.5s ease-in-out;
     z-index: 100;
+}
+
+input {
+    width: 180px;
+    transform: rotate(270deg);
 }
 
 .keys {
