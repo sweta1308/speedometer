@@ -3,11 +3,16 @@ const knob = document.getElementById("knob");
 let currentSpeed = 0;
 
 const setSpeed = (value) => {
+  console.log(value)
   currentSpeed = value;
   const needle = document.getElementById('needle');
   const angle = 270 * value/180 - 135;
-  if (angle >= -135 && angle <= 135) {
+  if (angle >= -135 && angle <= 135 && value >= 5 && value <= 180) {
     needle.style.transform = `translateX(-50%) rotate(${angle}deg)`;
+  } else if (value > 180) {
+    needle.style.transform = `translateX(-50%) rotate(135deg)`
+  } else if (value < 5) {
+    needle.style.transform = `translateX(-50%) rotate(-135deg)`
   }
 }
 
@@ -15,7 +20,7 @@ const handleDrag = (e) => {
   const knobPosition = rangeContainer.getBoundingClientRect().bottom - e.clientY;
   const speedValue = Math.round(knobPosition);
   setSpeed(speedValue);
-  knob.style.bottom = `${knobPosition <= 180 && knobPosition}px`;
+  knob.style.bottom = `${knobPosition <= 185 && knobPosition}px`;
 }
 
 knob.addEventListener("mousedown", (e) => {
